@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script></head>
+    <div class="container">
+        <div class="login-box">
+            <div class="welcome-text">
+                <h1>Bienvenidos</h1>
+                <div id="error-message" class="error-message"></div>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" id="username" placeholder="Usuario" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock icon"></i>
+                        <input type="password" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <p><a href="/register">Crear cuenta</a></p>
+                </form>
+            </div>
+            <div class="image-box">
+                <img src="image.jpg" alt="Imagen">
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
