@@ -59,12 +59,30 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     overflow: hidden;
+    position: relative;
 }
 
 .login-box, .register-box {
     display: flex;
     flex: 1;
     flex-direction: row;
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+.theme-toggle a {
+    color: #000;
+    font-size: 2rem;
+    margin-left: 20px;
+}
+
+.theme-toggle a.dark-mode {
+    color: #fff;
 }
 
 .welcome-text {
@@ -124,6 +142,10 @@ body {
     font-weight: 600;
 }
 
+.btn:hover {
+    background-color: #333;
+}
+
 p {
     text-align: center;
     margin-top: 1rem;
@@ -146,6 +168,7 @@ p a {
     height: 100%;
     border-radius: 20px;
     object-fit: cover;
+    border: 2px solid #555;
 }
 
 .logout.btn {
@@ -166,13 +189,61 @@ p a {
     background-color: #333;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+nav.dark-mode {
+    background-color: rgba(18, 18, 18, 0.7);
+}
+
+nav ul li a.dark-mode {
+    color: #ffffff;
+}
+
+nav ul li a.active.dark-mode {
+    border-bottom: 2px solid #ffffff;
+}
+
+.container.dark-mode {
+    background: #1e1e1e;
+    border: 3px solid #333;
+}
+
+.input-group input.dark-mode {
+    background: #333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+.btn.dark-mode {
+    background-color: #444;
+    color: #ffffff;
+}
+
+.btn.dark-mode:hover {
+    background-color: #666;
+}
+
+.login-box.dark-mode, .register-box.dark-mode {
+    background: #1e1e1e;
+}
+
+.welcome-text.dark-mode h1 {
+    color: #ffffff;
+}
+
+p a.dark-mode {
+    color: #ffffff;
+}
+
 @media (max-width: 768px) {
     body {
         background-image: url(image.jpg);
         background-size: cover;
         background-position: center;
     }
-
 
     .login-box, .register-box {
         flex-direction: column;
@@ -182,10 +253,11 @@ p a {
         display: none;
     }
 
-    .welcome-text h1{
+    .welcome-text h1 {
         font-size: 40px;
     }
-    .welcome-text{
+
+    .welcome-text {
         padding: 1.5rem;
     }
 }

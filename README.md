@@ -23,11 +23,17 @@ Este proyecto es un sistema básico de login y registro de usuarios con una pant
 - **Cambio entre Formularios**: Permite a los usuarios cambiar entre los formularios de inicio de sesión y registro mediante enlaces y navegación en la barra superior.
 - **Barra de Navegación**: Incluye enlaces para iniciar sesión y registrarse, con estilos que indican la sección activa.
 
+### Modo Oscuro
+- **Activación del Modo Oscuro**: Permite a los usuarios alternar entre el modo claro y oscuro mediante un botón de alternancia.
+- **Estilos del Modo Oscuro**: Cambia los colores de fondo, texto y elementos de la interfaz para una mejor visualización en entornos con poca luz.
+
 ## Archivos Principales
 - `index.html`: Contiene la estructura HTML del sistema de login y registro.
 - `style.css`: Contiene los estilos CSS para el diseño y la presentación del sistema.
 - `login.js`: Contiene la lógica JavaScript para el manejo del inicio de sesión.
 - `register.js`: Contiene la lógica JavaScript para el manejo del registro de usuarios.
+- `theme.js`: Contiene la lógica JavaScript para el manejo del modo oscuro.
+- `image.jpg`: Imagen utilizada en la pantalla de login.
 
 ## Instalación
 1. Clona el repositorio o descarga los archivos.
@@ -37,6 +43,10 @@ Este proyecto es un sistema básico de login y registro de usuarios con una pant
 1. Navega a la página de inicio de sesión o registro.
 2. Completa los formularios según sea necesario.
 3. Sigue las instrucciones y mensajes en pantalla.
+4. Alterna entre el modo claro y oscuro según tu preferencia.
+
+## Cambiar Imagen de Login
+Para cambiar la imagen del login, reemplaza el archivo `image.jpg` con la nueva imagen que deseas utilizar.
 
 ## Créditos
 Este proyecto utiliza las siguientes tecnologías y recursos:
