@@ -1,3 +1,39 @@
+nav {
+    background-color: rgba(241, 241, 241, 0.7);
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 2rem;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #000000;
+}
+
+.hidden {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,14 +61,16 @@ body {
     overflow: hidden;
 }
 
-.login-box {
+.login-box, .register-box {
     display: flex;
     flex: 1;
     flex-direction: row;
 }
+
 .welcome-text {
     margin-top: 50px;
     padding: 2rem;
+    flex: 1;
 }
 
 .welcome-text h1 {
@@ -86,13 +124,10 @@ body {
     font-weight: 600;
 }
 
-.btn:hover {
-    background-color: #333;
-}
-
 p {
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 p a {
@@ -113,6 +148,24 @@ p a {
     object-fit: cover;
 }
 
+.logout.btn {
+    width: 50%;
+    padding: 0.75rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
 @media (max-width: 768px) {
     body {
         background-image: url(image.jpg);
@@ -121,7 +174,7 @@ p a {
     }
 
 
-    .login-box {
+    .login-box, .register-box {
         flex-direction: column;
     }
 
