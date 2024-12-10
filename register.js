@@ -55,13 +55,13 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     errorMessage.textContent = "Registro exitoso";
     errorMessage.style.color = "green";
     setTimeout(function() {
-        document.querySelector("nav").classList.add("hidden");
         document.getElementById("registerFormContainer").innerHTML = `
             <h1>404</h1>
             <p>¡Página no encontrada! Esta sección está en construcción, pero puedes volver al inicio para seguir explorando.</p>
             <button id="logout" class="btn logout">Cerrar sesión</button>
         `;
         document.getElementById("logout").addEventListener("click", function () {
+            localStorage.removeItem("activeSession");
             location.reload();
         });
     }, 2000);
@@ -70,27 +70,9 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
 document.getElementById("showRegisterForm").addEventListener("click", function () {
     document.getElementById("loginBox").style.display = "none";
     document.getElementById("registerBox").style.display = "flex";
-    document.getElementById("navLogin").classList.remove("active");
-    document.getElementById("navRegister").classList.add("active");
 });
 
 document.getElementById("showLoginForm").addEventListener("click", function () {
     document.getElementById("loginBox").style.display = "flex";
     document.getElementById("registerBox").style.display = "none";
-    document.getElementById("navLogin").classList.add("active");
-    document.getElementById("navRegister").classList.remove("active");
-});
-
-document.getElementById("navRegister").addEventListener("click", function () {
-    document.getElementById("loginBox").style.display = "none";
-    document.getElementById("registerBox").style.display = "flex";
-    document.getElementById("navLogin").classList.remove("active");
-    document.getElementById("navRegister").classList.add("active");
-});
-
-document.getElementById("navLogin").addEventListener("click", function () {
-    document.getElementById("loginBox").style.display = "flex";
-    document.getElementById("registerBox").style.display = "none";
-    document.getElementById("navLogin").classList.add("active");
-    document.getElementById("navRegister").classList.remove("active");
 });
