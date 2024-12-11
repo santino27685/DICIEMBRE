@@ -54,7 +54,10 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
 
     errorMessage.textContent = "Registro exitoso";
     errorMessage.style.color = "green";
-    setTimeout(function() {
+
+    localStorage.setItem("activeSession", JSON.stringify({ username, timestamp: Date.now() }));
+
+    setTimeout(function () {
         document.getElementById("registerFormContainer").innerHTML = `
             <h1>404</h1>
             <p>¡Página no encontrada! Esta sección está en construcción, pero puedes volver al inicio para seguir explorando.</p>
@@ -65,6 +68,12 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
             location.reload();
         });
     }, 2000);
+
+    setTimeout(function () {
+        localStorage.removeItem("activeSession");
+        alert("La sesión ha expirado. Por favor, inicie sesión nuevamente.");
+        location.reload();
+    }, 10 * 60 * 1000);
 });
 
 document.getElementById("showRegisterForm").addEventListener("click", function () {

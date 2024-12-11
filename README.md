@@ -19,10 +19,6 @@ Este proyecto es un sistema básico de login y registro de usuarios con una pant
 - **Mensaje de Error**: Muestra mensajes de error específicos para cada tipo de validación fallida.
 - **Registro Exitoso**: Al completar el registro exitosamente, se muestra una pantalla 404 indicando que la sección está en construcción.
 
-### Navegación
-- **Cambio entre Formularios**: Permite a los usuarios cambiar entre los formularios de inicio de sesión y registro mediante enlaces y navegación en la barra superior.
-- **Barra de Navegación**: Incluye enlaces para iniciar sesión y registrarse, con estilos que indican la sección activa.
-
 ### Modo Oscuro
 - **Activación del Modo Oscuro**: Permite a los usuarios alternar entre el modo claro y oscuro mediante un botón de alternancia.
 - **Estilos del Modo Oscuro**: Cambia los colores de fondo, texto y elementos de la interfaz para una mejor visualización en entornos con poca luz.
@@ -47,6 +43,11 @@ Este proyecto es un sistema básico de login y registro de usuarios con una pant
 
 ## Cambiar Imagen de Login
 Para cambiar la imagen del login, reemplaza el archivo `image.jpg` con la nueva imagen que deseas utilizar.
+
+## Cambios Realizados
+- **Navbar eliminada y modo oscuro se guarda en LocalStorage**: La barra de navegación ha sido eliminada y la preferencia del modo oscuro ahora se guarda en `localStorage`.
+- **Implementación de sesión con timeout**: Se ha implementado una funcionalidad de sesión con tiempo de espera.
+- **Mejora de naming y organización de carpetas**: Se ha mejorado la nomenclatura y la organización de las carpetas del proyecto.
 
 ## Créditos
 Este proyecto utiliza las siguientes tecnologías y recursos:
