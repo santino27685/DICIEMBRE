@@ -30,7 +30,8 @@ body {
     position: relative;
 }
 
-.login-box, .register-box {
+.login-box,
+.register-box {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -157,6 +158,63 @@ p a {
     background-color: #333;
 }
 
+.dice-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.dice-container box-icon {
+    width: 150px;
+    height: 150px;
+}
+
+.dice-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dice-info h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dice-info p {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.btn.roll,
+.btn.logout {
+    width: auto;
+    padding: 0.5rem 1rem;
+    margin-top: 20px;
+}
+
+.dice-page .image-box {
+    display: none;
+}
+
+.dice-page #loginFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container.dark-mode {
+    background: #1e1e1e;
+    border: 3px solid #333;
+}
+
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -182,8 +240,38 @@ body.dark-mode {
     background-color: #666;
 }
 
-.login-box.dark-mode, .register-box.dark-mode {
+.login-box.dark-mode,
+.register-box.dark-mode {
     background: #1e1e1e;
+}
+
+.dice-container box-icon {
+    width: 150px;
+    height: 150px;
+}
+
+.dice-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dice-page .btn.roll,
+.dice-page .btn.logout {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.dice-page .btn.roll.dark-mode,
+.dice-page .btn.logout.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.dice-page .btn.roll:hover,
+.dice-page .btn.logout:hover {
+    background-color: #555;
 }
 
 .welcome-text.dark-mode h1 {
@@ -201,7 +289,8 @@ p a.dark-mode {
         background-position: center;
     }
 
-    .login-box, .register-box {
+    .login-box,
+    .register-box {
         flex-direction: column;
     }
 
@@ -216,4 +305,8 @@ p a.dark-mode {
     .welcome-text {
         padding: 1.5rem;
     }
+}
+
+.dice-page .image-box {
+    display: none;
 }

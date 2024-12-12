@@ -21,15 +21,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
         }, 10 * 60 * 1000);
 
         setTimeout(function() {
-            document.getElementById("loginFormContainer").innerHTML = `
-                <h1>404</h1>
-                <p>¡Página no encontrada! Esta sección está en construcción, pero puedes volver al inicio para seguir explorando.</p>
-                <button id="logout" class="btn logout">Cerrar sesión</button>
-            `;
-            document.getElementById("logout").addEventListener("click", function () {
-                localStorage.removeItem("activeSession");
-                location.reload();
-            });
+            initializeDiceGame(username);
         }, 2000);
     } else {
         errorMessage.textContent = "Usuario o contraseña incorrectos";
@@ -45,15 +37,7 @@ window.addEventListener("load", function () {
         const elapsedTime = currentTime - sessionTime;
 
         if (elapsedTime < 10 * 60 * 1000) {
-            document.getElementById("loginFormContainer").innerHTML = `
-                <h1>404</h1>
-                <p>¡Página no encontrada! Esta sección está en construcción, pero puedes volver al inicio para seguir explorando.</p>
-                <button id="logout" class="btn logout">Cerrar sesión</button>
-            `;
-            document.getElementById("logout").addEventListener("click", function () {
-                localStorage.removeItem("activeSession");
-                location.reload();
-            });
+            initializeDiceGame(activeSession.username);
 
             setTimeout(function () {
                 localStorage.removeItem("activeSession");

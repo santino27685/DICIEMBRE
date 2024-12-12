@@ -21,6 +21,12 @@ function applyDarkMode() {
     document.querySelectorAll(".image-box img").forEach(function (img) {
         img.classList.add("dark-mode");
     });
+    document.querySelectorAll(".dice-container .btn").forEach(function (btn) {
+        btn.classList.add("dark-mode");
+    });
+    document.querySelectorAll(".dice-container box-icon").forEach(function (icon) {
+        icon.setAttribute('color', '#ffffff');
+    });
 }
 
 function removeDarkMode() {
@@ -45,6 +51,12 @@ function removeDarkMode() {
     });
     document.querySelectorAll(".image-box img").forEach(function (img) {
         img.classList.remove("dark-mode");
+    });
+    document.querySelectorAll(".dice-container .btn").forEach(function (btn) {
+        btn.classList.remove("dark-mode");
+    });
+    document.querySelectorAll(".dice-container box-icon").forEach(function (icon) {
+        icon.removeAttribute('color');
     });
 }
 
