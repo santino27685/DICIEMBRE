@@ -56,3 +56,4 @@ Este proyecto utiliza las siguientes tecnologías y recursos:
 - JavaScript
 - Google Fonts
 - Font Awesome
+cabus y randazzo 
